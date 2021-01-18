@@ -9,14 +9,12 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import ImageUploader from '@/components/ImageUploader.vue'
 import ThrowVisionApi from '@/components/ThrowVisionApi.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
     ImageUploader,
     ThrowVisionApi
   },
