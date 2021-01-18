@@ -2,7 +2,8 @@
   <div id="home">
     <TheUpload v-model="toBase64Image"/>
     <!-- v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義 -->
-     <ThrowVisionApi :picture="replaceImageUrl" />
+    <ThrowVisionApi :picture="replaceImageUrl" />
+    
   </div>
 </template>
 

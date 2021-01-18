@@ -3,23 +3,23 @@
 ## ① yarnのインストール
 調べてね
 
-## ② yarnのセットアップ（yarnのインストール手順とはまた別）
+## ② yarnのセットアップ（yarnのインストールとはまた別）
 ```
 yarn install
 ```
 
-### ③ GCPのキーを手に入れる
+## ③ GCPのキーを手に入れる
 * Google Cloud Platformにログイン
 * **APIとサービス** → **認証情報**
 * ”キー”の左にある□のボタンをクリックしてコピー
 
-### ④ GCPのキーを入れる()
+## ④ GCPのキーを入れる()
 ホームディレクトリ配下に、 `.env.local` を作る
 ```
 VUE_APP_API_KEY = 'GCPからコピーしたAPIのキーを入れる'
 ```
 
-### ⑤ Electron起動
+## ⑤ Electron起動
 ```
 yarn electron:serve
 ```

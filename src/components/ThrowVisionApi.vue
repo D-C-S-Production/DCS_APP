@@ -1,6 +1,8 @@
 <template>
   <div id="ThrowVisionApi">
     <button @click="callApi">API呼び出し</button>
+    <p v-if="called==true && countPerson != 0">人物を{{ countPerson }}人検出しました。</p>
+    <p v-else-if="called==true && countPerson == 0">人物を検出できませんでした。</p>
   </div>
 </template>
 
@@ -11,6 +13,13 @@ export default {
   name: 'ThrowVisionApi',
   props: {
     picture: String
+  },
+  data() {
+    return {
+      countPerson: 0,
+      // APIを呼び出し成功したときにtrueにする
+      called: false
+    }
   },
   methods: {
     async callApi() {
@@ -32,9 +41,15 @@ export default {
           responses.forEach(response => {
             response.localizedObjectAnnotations.forEach(object => {
               console.log(object.name)
+              if(object.name == "Person"){
+                this.countPerson++
+              }
             })            
           })
         }
+        this.called = true
+        // 後で書くやつ(親コンポーネントに「カウントできた人数」を投げて、CalcCongestionで計算する)
+        // this.$emit('event', this.countPerson)
       }
       catch(error) {
         console.error(error.response || error);
