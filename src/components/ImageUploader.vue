@@ -1,5 +1,5 @@
 <template>
-  <div id="TheUpload">
+  <div id="ImageUploader">
     <label v-if="!value">
       <input ref="file" type="file" accept="image/jpeg, image/png" @change="upload">
     </label>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'TheUpload',
+  name: 'ImageUploader',
   props: {
     value: {
       type: String,

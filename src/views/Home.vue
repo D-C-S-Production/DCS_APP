@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <TheUpload v-model="toBase64Image"/>
+    <ImageUploader v-model="toBase64Image"/>
     <!-- v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義 -->
     <ThrowVisionApi :picture="replaceImageUrl" />
     
@@ -10,14 +10,14 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-import TheUpload from '@/components/TheUpload.vue'
+import ImageUploader from '@/components/ImageUploader.vue'
 import ThrowVisionApi from '@/components/ThrowVisionApi.vue'
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
-    TheUpload,
+    ImageUploader,
     ThrowVisionApi
   },
   data: () => ({
