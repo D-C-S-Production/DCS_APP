@@ -48,8 +48,11 @@ export default {
           })
         }
         this.called = true
-        // 後で書くやつ(親コンポーネントに「カウントできた人数」を投げて、CalcCongestionで計算する)
-        // this.$emit('event', this.countPerson)
+        /*
+          カスタムイベント@countを作成する。
+          親コンポーネントに「カウントできた人数（countPerson）」を投げる。
+        */
+        this.$emit('count', this.countPerson)
       }
       catch(error) {
         console.error(error.response || error);

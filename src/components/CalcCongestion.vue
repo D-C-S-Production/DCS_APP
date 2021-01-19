@@ -1,5 +1,6 @@
 <template>
   <div id="CalcCongestion">
+    <input type="text">
   </div>
 </template>
 
