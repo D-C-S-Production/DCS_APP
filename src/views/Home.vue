@@ -1,7 +1,9 @@
 <template>
   <div id="home">
+    <!-- 
+      v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義
+    -->
     <ImageUploader v-model="toBase64Image"/>
-    <!-- v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義 -->
     <!--
       :pictureにはreplaceImageUrlメソッドからの戻り値が入る(props down)
       カスタムイベント@countから、setCountメソッドを呼び出す(event up)
@@ -9,7 +11,7 @@
     -->
     <ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/>
     <!-- 仮表示 -->
-    {{ count }}
+    親側でのカウント確認 {{ count }}
   </div>
 </template>
 
@@ -44,7 +46,11 @@ export default {
       return this.toBase64Image.replace(/^data:image\/(png|jpeg);base64,/, '')
     },
 
-    // countのセッター（本来はcomputedでやるべきだけど、なぜかエラーが起きるので仕方なくmethodsでやった）
+    /*
+      countのセッター
+      (本来はcomputedでやるべきだけど、なぜかエラー吐くので仕方なくmethodsでやった)
+     引数には子コンポーネントの$emitで受け取ったデータ(countPerson)が勝手に入る
+    */
     setCount(number){
       return this.count = number
     }
