@@ -1,8 +1,7 @@
 <template>
   <div id="ThrowVisionApi">
-    <button @click="callApi">API呼び出し</button>
-    <p v-if="called==true && countPerson != 0">人物を{{ countPerson }}人検出しました。</p>
-    <p v-else-if="called==true && countPerson == 0">人物を検出できませんでした。</p>
+    <button @click="callApi" onclick="this.disabled = true">API呼び出し</button>
+    <p v-if="called==true && countPerson == 0">人物を検出できませんでした。</p>
   </div>
 </template>
 

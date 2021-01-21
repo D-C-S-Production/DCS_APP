@@ -2,8 +2,12 @@
   <div id="home">
     <!-- 
       v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義
+      valueというpropsと、inputイベントを自動作成する
+      $eventは、カスタムイベントの引数。これならinput
     -->
     <ImageUploader v-model="toBase64Image"/>
+
+    <CalcCongestion :count="count"/>
     <!--
       :pictureにはreplaceImageUrlメソッドからの戻り値が入る(props down)
       カスタムイベント@countから、setCountメソッドを呼び出す(event up)
@@ -11,7 +15,7 @@
     -->
     <ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/>
     <!-- 仮表示 -->
-    親側でのカウント確認 {{ count }}
+    <!-- 親側でのカウント確認 {{ count }} -->
   </div>
 </template>
 
@@ -19,12 +23,14 @@
 // @ is an alias to /src
 import ImageUploader from '@/components/ImageUploader.vue'
 import ThrowVisionApi from '@/components/ThrowVisionApi.vue'
+import CalcCongestion from '@/components/CalcCongestion.vue'
 
 export default {
   name: 'Home',
   components: {
     ImageUploader,
-    ThrowVisionApi
+    ThrowVisionApi,
+    CalcCongestion
   },
   data: () => ({
     /*
