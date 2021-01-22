@@ -4,7 +4,6 @@
     <input v-model="referenceValue">
     <p>人数カウント {{ count }}人</p>
     <p>結果(仮置き) {{ result }}%</p>
-
   </div>
 </template>
 
@@ -21,7 +20,9 @@ export default {
   },
   computed: {
     result() {
-      return Math.floor((this.count / this.referenceValue) * 100)
+      if(this.referenceValue != 0){
+        return Math.floor((this.count / this.referenceValue) * 100)
+      }
     }
   }
 }

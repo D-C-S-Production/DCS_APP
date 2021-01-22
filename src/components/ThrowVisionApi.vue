@@ -1,6 +1,6 @@
 <template>
   <div id="ThrowVisionApi">
-    <button @click="callApi" onclick="this.disabled = true">API呼び出し</button>
+    <button @click="callApi" :disabled="called">API呼び出し</button>
     <p v-if="called==true && countPerson == 0">人物を検出できませんでした。</p>
   </div>
 </template>
