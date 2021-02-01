@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+    <h1>混雑率図るくん</h1>
     <!-- 
       v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義
       valueというpropsと、inputイベントを自動作成する
@@ -14,8 +15,6 @@
       props downとevent upでメソッドを呼び出すときの書き方が違うので気をつけること!
     -->
     <ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/>
-    <!-- 仮表示 -->
-    <!-- 親側でのカウント確認 {{ count }} -->
   </div>
 </template>
 
@@ -40,7 +39,7 @@ export default {
     toBase64Image: '',
 
     // 子コンポーネント(ThrowVisionApi.vue)から持ってきた人数を入れる変数count
-    count: 0
+    count: 0,
   }),
 
   methods: {

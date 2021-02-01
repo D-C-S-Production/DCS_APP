@@ -3,7 +3,7 @@
     <!-- 仮表示 -->
     <input v-model="referenceValue">
     <p>人数カウント {{ count }}人</p>
-    <p>結果(仮置き) {{ result }}%</p>
+    <p>{{ result }}</p>
   </div>
 </template>
 
@@ -15,13 +15,19 @@ export default {
   },
   data() {
     return {
-      referenceValue: 0,
+      referenceValue: 0
     }
   },
   computed: {
     result() {
-      if(this.referenceValue != 0){
-        return Math.floor((this.count / this.referenceValue) * 100)
+      // toFix(第何位)で桁数を整える
+      if(this.referenceValue > 0){
+        let persentage = Math.floor(this.count / this.referenceValue * 100)
+        return '現在の混雑率は' + persentage + '%です'
+      } else if (this.referenceValue == 0){
+        return '数を入力してください'
+      } else {
+        return '有効な値を入力してください（半角数字以外入力不可）'
       }
     }
   }

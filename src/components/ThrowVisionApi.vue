@@ -32,14 +32,12 @@ export default {
       try {
         // axiosを使ってXMLHttpRequestをpostする
         const result = await axios.post(visionApiUrl, params)
-        console.log("Request success!")
         // なぜresult.dataなのかは公式参照 ( https://github.com/axios/axios#response-schema )
         if (result.data && result.data.responses) {
           const responses = result.data.responses
           // 入れ子ごとにforEachで掘り進める
           responses.forEach(response => {
             response.localizedObjectAnnotations.forEach(object => {
-              console.log(object.name)
               if(object.name == "Person"){
                 this.countPerson++
               }
@@ -49,12 +47,13 @@ export default {
         this.called = true
         /*
           カスタムイベント@countを作成する。
+          カスタムイベントの命名規則はケバブケース(kebab-case)
           親コンポーネントに「カウントできた人数（countPerson）」を投げる。
         */
         this.$emit('count', this.countPerson)
       }
       catch(error) {
-        console.error(error.response || error);
+        console.error(error.response || error)
       }
     },
 

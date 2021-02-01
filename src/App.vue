@@ -1,13 +1,20 @@
 <template>
   <div id="app">
     <router-view/>
-    <router-link to="/" tag="button">Home</router-link>
+    <button @click="openWindow()">開く</button>
   </div>
 </template>
-
 <script>
 export default {
-  
+  name: 'App',
+  methods:{
+    openWindow() {
+      let resolvedRoute = this.$router.resolve({
+        name: 'Kaiteki',
+      })
+      window.open(resolvedRoute.href, '', '_blank,width=1285,height=830')
+    }
+  }
 }
 </script>
 
