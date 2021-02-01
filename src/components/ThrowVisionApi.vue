@@ -1,6 +1,6 @@
 <template>
   <div id="ThrowVisionApi">
-    <button @click="callApi" :disabled="called">API呼び出し</button>
+    <button @click="callApi" :disabled="called">混雑率を計測する</button>
     <p v-if="called==true && countPerson == 0">人物を検出できませんでした。</p>
   </div>
 </template>
@@ -28,7 +28,6 @@ export default {
       const visionApiUrl = `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`
       // VisionAPIに送るデータ(配列)を指定する
       const params = this.setParamaters(this.picture)
-
       try {
         // axiosを使ってXMLHttpRequestをpostする
         const result = await axios.post(visionApiUrl, params)

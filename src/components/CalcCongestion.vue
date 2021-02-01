@@ -1,7 +1,7 @@
 <template>
   <div id="CalcCongestion">
     <!-- 仮表示 -->
-    <input v-model="referenceValue">
+    <input v-model="referenceValue" placeholder="基準値を入力">
     <p>人数カウント {{ count }}人</p>
     <p>{{ result }}</p>
   </div>
@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      referenceValue: 0
+      referenceValue: null
     }
   },
   computed: {
@@ -27,7 +27,7 @@ export default {
       } else if (this.referenceValue == 0){
         return '数を入力してください'
       } else {
-        return '有効な値を入力してください（半角数字以外入力不可）'
+        return '基準値を入力してください（半角数字以外入力不可）'
       }
     }
   }
