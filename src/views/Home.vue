@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <h1></h1>
+    <h1>混雑率図るくん</h1>
     <!-- 
       v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義
       valueというpropsと、inputイベントを自動作成する
@@ -8,14 +8,14 @@
     -->
     <ImageUploader v-model="toBase64Image"/>
 
-    <CalcCongestion :count="count"/>
+    <CalcCongestion :count="count" @persentage="setPersentage"/>
     <!--
       :pictureにはreplaceImageUrlメソッドからの戻り値が入る(props down)
       カスタムイベント@countから、setCountメソッドを呼び出す(event up)
       props downとevent upでメソッドを呼び出すときの書き方が違うので気をつけること!
     -->
     <ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/>
-    <ResolveRoute/>
+    <ResolveRoute :persentage="persentage"/>
   </div>
 </template>
 
@@ -24,7 +24,7 @@
 import ImageUploader from '@/components/ImageUploader.vue'
 import ThrowVisionApi from '@/components/ThrowVisionApi.vue'
 import CalcCongestion from '@/components/CalcCongestion.vue'
-import ResolveRoute from '../components/ResolveRoute.vue'
+import ResolveRoute from '@/components/ResolveRoute.vue'
 
 export default {
   name: 'Home',
@@ -43,6 +43,8 @@ export default {
 
     // 子コンポーネント(ThrowVisionApi.vue)から持ってきた人数を入れる変数count
     count: 0,
+
+    persentage: 0
   }),
 
   methods: {
@@ -61,6 +63,10 @@ export default {
     */
     setCount(number){
       return this.count = number
+    },
+
+    setPersentage(number){
+      return this.persentage = number
     }
   }
 }

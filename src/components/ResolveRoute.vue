@@ -1,13 +1,33 @@
 <template>
   <div>
     <p><button @click="reloadWindow()">やり直す</button></p>
-    <p><button @click="openWindow('Kaiteki')">サイネージ用ウィンドウを開く</button></p>
+    <p><button @click="openWindow(output)">サイネージ用ウィンドウを開く</button></p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'ResolveRoute',
+  props: {
+    persentage: Number
+  },
+
+  computed: {
+    output() {
+      if(this.persentage <= 20) {
+        return 'Kaiteki'
+      } else if(this.persentage <= 40) {
+        return 'OoyosoKaiteki'
+      } else if(this.persentage <= 60) {
+        return 'YayaKonzatsu'
+      } else if(this.persentage <= 80) {
+        return 'Konzatsu'
+      } else {
+        return 'TotemoKonzatsu'
+      }
+    }
+  },
+
   methods:{
     // 混雑率表示画面を新しいウィンドウで開くメソッドopenWindow()
     openWindow(name) {
