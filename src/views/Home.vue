@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <h1>混雑率図るくん</h1>
+    <h1></h1>
     <!-- 
       v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義
       valueというpropsと、inputイベントを自動作成する
@@ -15,6 +15,7 @@
       props downとevent upでメソッドを呼び出すときの書き方が違うので気をつけること!
     -->
     <ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/>
+    <ResolveRoute/>
   </div>
 </template>
 
@@ -23,13 +24,15 @@
 import ImageUploader from '@/components/ImageUploader.vue'
 import ThrowVisionApi from '@/components/ThrowVisionApi.vue'
 import CalcCongestion from '@/components/CalcCongestion.vue'
+import ResolveRoute from '../components/ResolveRoute.vue'
 
 export default {
   name: 'Home',
   components: {
     ImageUploader,
     ThrowVisionApi,
-    CalcCongestion
+    CalcCongestion,
+    ResolveRoute
   },
   data: () => ({
     /*
