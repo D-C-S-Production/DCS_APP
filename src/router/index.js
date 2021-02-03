@@ -14,6 +14,26 @@ const routes = [
     path: '/kaiteki',
     name: 'Kaiteki',
     component: () => import(/* webpackChunkName: "about" */ '../views/Kaiteki.vue')
+  },
+  {
+    path: '/ooyosokaiteki',
+    name: 'OoyosoKaiteki',
+    component: () => import(/* webpackChunkName: "about" */ '../views/OoyosoKaiteki.vue')
+  },
+  {
+    path: '/yayakonzatsu',
+    name: 'YayaKonzatsu',
+    component: () => import(/* webpackChunkName: "about" */ '../views/YayaKonzatsu.vue')
+  },
+  {
+    path: '/konzatsu',
+    name: 'Konzatsu',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Konzatsu.vue')
+  },
+  {
+    path: '/totemokonzatsu',
+    name: 'TotemoKonzatsu',
+    component: () => import(/* webpackChunkName: "about" */ '../views/TotemoKonzatsu.vue')
   }
   // {
   //   path: '/example',

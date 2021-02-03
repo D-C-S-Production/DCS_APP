@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <router-view/>
-    <p><button @click="openWindow()">開く</button></p>
     <p><button @click="reloadWindow()">やり直す</button></p>
+    <p><button @click="openWindow('Konzatsu')">サイネージ用ウィンドウを開く</button></p>
   </div>
 </template>
 
@@ -11,10 +11,10 @@ export default {
   name: 'App',
   methods:{
     // 混雑率表示画面を新しいウィンドウで開くメソッドopenWindow()
-    openWindow() {
+    openWindow(name) {
       // vue-routerのルーティングプロパティ$routerで、ルーティングを逆解決する
       let resolvedRoute = this.$router.resolve({
-        name: 'Kaiteki',
+        name: name,
       })
       window.open(resolvedRoute.href, '', '_blank,width=1285,height=830')
     },

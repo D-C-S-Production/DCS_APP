@@ -1,55 +1,55 @@
 <template>
-	<html>
-		<head>
-			<meta charset="utf-8"/>
-			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>1280 Web – 1</title>
-		</head>
-	<body>
-		<div id="ID1280_Web__1">
-				<svg class="side-color" viewBox="0 0 1280 1">
-					<path id="side-color" d="M 0 0 L 1280 0">
-					</path>
-				</svg>
-				<div id="congestion-01">
-					<span style="font-size:128px;">ただいまの混雑状況は</span>
-				</div>
-				<svg class="vertical-color" viewBox="0 0 1 650">
-					<path id="vertical-color" d="M 0 0 L 0 650">
-					</path>
-				</svg>
-			<!-- meter_01~05を順に整理しようとすると枠線が消えるためこのまま-->
-				<svg class="meter_02">
-					<rect id="meter_02" rx="0" ry="0" x="0" y="0" width="494" height="575">
-					</rect>
-				</svg>
-				<svg class="meter_05">
-					<rect id="meter_05" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<svg class="meter_04">
-					<rect id="meter_04" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<svg class="meter_01">
-					<rect id="meter_01" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<svg class="meter_03">
-					<rect id="meter_03" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<div id="letter_01">
-					<span></span><span style="font-size:240px;">快適</span>
-				</div>
-			</div>
-		</body>
-	</html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1280 Web – 1</title>
+</head>
+<body>
+<div id="ID1280_Web__1">
+	<svg class="side-color" viewBox="0 0 1280 1">
+		<path id="side-color" d="M 0 0 L 1280 0">
+		</path>
+	</svg>
+	<div id="congestion-01">
+		<span style="font-size:128px;">ただいまの混雑状況は</span>
+	</div>
+	<svg class="vertical-color" viewBox="0 0 1 650">
+		<path id="vertical-color" d="M 0 0 L 0 650">
+		</path>
+	</svg>
+<!-- meter_01~05を順に整理しようとすると枠線が消えるためこのまま-->
+	<svg class="meter_02">
+		<rect id="meter_02" rx="0" ry="0" x="0" y="0" width="494" height="575">
+		</rect>
+	</svg>
+	<svg class="meter_05">
+		<rect id="meter_05" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		</rect>
+	</svg>
+	<svg class="meter_04">
+		<rect id="meter_04" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		</rect>
+	</svg>
+	<svg class="meter_01">
+		<rect id="meter_01" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		</rect>
+	</svg>
+	<svg class="meter_03">
+		<rect id="meter_03" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		</rect>
+	</svg>
+	<div id="letter_01">
+		<span></span><span style="font-size:96px;">おおよそ</span><br><span style="font-size:216px;">快適</span>
+	</div>
+</div>
+</body>
+</html>
 </template>
 
 <style id="applicationStylesheet" type="text/css">
-  /*
+ /*
   リセットCSSがないと混雑表示ディスプレイがずれるので導入
   html5doctor.com Reset Stylesheet
   v1.6.1
@@ -231,7 +231,7 @@
 		transform: matrix(1,0,0,1,0,0);
 	}
 	#meter_01 {
-		fill: rgba(30,255,255,1);
+		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
 		stroke-linejoin: miter;
@@ -248,7 +248,7 @@
 		top: 656px;
 	}
 	#meter_02 {
-		fill: rgba(128,128,128,1);
+		fill: rgba(0,255,51,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
 		stroke-linejoin: miter;
@@ -299,7 +299,6 @@
 		top: 311px;
 	}
 	#meter_05 {
-		opacity: 0.92;
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -309,7 +308,6 @@
 		shape-rendering: auto;
 	}
 	.meter_05 {
-		filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 		position: absolute;
 		overflow: visible;
 		width: 512px;
@@ -318,8 +316,8 @@
 		top: 196px;
 	}
 	#letter_01 {
-		left: 80px;
-		top: 360px;
+		left: 101px;
+		top: 289px;
 		position: absolute;
 		overflow: visible;
 		width: 444px;
@@ -329,7 +327,6 @@
 		font-style: normal;
 		font-weight: normal;
 		font-size: 100px;
-		color: rgba(30,255,255,1);
+		color: rgba(0,255,51,1);
 	}
-
 </style>
