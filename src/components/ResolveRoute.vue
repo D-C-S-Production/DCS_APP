@@ -11,7 +11,6 @@ export default {
   props: {
     persentage: Number
   },
-
   computed: {
     output() {
       if(this.persentage <= 20) {
@@ -23,11 +22,10 @@ export default {
       } else if(this.persentage <= 80) {
         return 'Konzatsu'
       } else {
-        return 'TotemoKonzatsu'
+        return 'HijoNiKonzatsu'
       }
     }
   },
-
   methods:{
     // 混雑率表示画面を新しいウィンドウで開くメソッドopenWindow()
     openWindow(name) {

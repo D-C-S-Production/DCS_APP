@@ -31,9 +31,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Konzatsu.vue')
   },
   {
-    path: '/totemokonzatsu',
-    name: 'TotemoKonzatsu',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TotemoKonzatsu.vue')
+    path: '/hijonikonzatsu',
+    name: 'HijoNiKonzatsu',
+    component: () => import(/* webpackChunkName: "about" */ '../views/HijoNiKonzatsu.vue')
   }
   // {
   //   path: '/example',

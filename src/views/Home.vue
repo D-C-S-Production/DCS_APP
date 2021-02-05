@@ -9,12 +9,14 @@
     <ImageUploader v-model="toBase64Image"/>
 
     <CalcCongestion :count="count" @persentage="setPersentage"/>
+
     <!--
       :pictureにはreplaceImageUrlメソッドからの戻り値が入る(props down)
       カスタムイベント@countから、setCountメソッドを呼び出す(event up)
       props downとevent upでメソッドを呼び出すときの書き方が違うので気をつけること!
     -->
     <ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/>
+
     <ResolveRoute :persentage="persentage"/>
   </div>
 </template>
@@ -65,6 +67,7 @@ export default {
       return this.count = number
     },
 
+    // persentageのセッター
     setPersentage(number){
       return this.persentage = number
     }

@@ -1,185 +1,68 @@
 <template>
-	<html>
-		<head>
-			<meta charset="utf-8"/>
-			<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>1280 Web – 1</title>
-		</head>
-	<body>
-		<div id="ID1280_Web__1">
-				<svg class="side-color" viewBox="0 0 1280 1">
-					<path id="side-color" d="M 0 0 L 1280 0">
-					</path>
-				</svg>
-				<div id="congestion-01">
-					<span style="font-size:128px;">ただいまの混雑状況は</span>
-				</div>
-				<svg class="vertical-color" viewBox="0 0 1 650">
-					<path id="vertical-color" d="M 0 0 L 0 650">
-					</path>
-				</svg>
-			<!-- meter_01~05を順に整理しようとすると枠線が消えるためこのまま-->
-				<svg class="meter_02">
-					<rect id="meter_02" rx="0" ry="0" x="0" y="0" width="494" height="575">
-					</rect>
-				</svg>
-				<svg class="meter_05">
-					<rect id="meter_05" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<svg class="meter_04">
-					<rect id="meter_04" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<svg class="meter_01">
-					<rect id="meter_01" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<svg class="meter_03">
-					<rect id="meter_03" rx="0" ry="0" x="0" y="0" width="494" height="115">
-					</rect>
-				</svg>
-				<div id="letter_01">
-					<span></span><span style="font-size:240px;">快適</span>
-				</div>
-			</div>
-		</body>
-	</html>
+	<div id="kaiteki">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" >
+		<svg class="side-color-01" viewBox="0 0 1280 1">
+			<path id="side-color-01" d="M 0 0 L 1280 0">
+			</path>
+		</svg>
+		<div id="congestion-01">
+			<span style="font-size:128px;">ただいまの混雑状況は</span>
+		</div>
+		<svg class="vertical-color-01" viewBox="0 0 1 650">
+			<path id="vertical-color-01" d="M 0 0 L 0 650">
+			</path>
+		</svg>
+		<svg class="meter-A-01">
+			<rect id="meter-A-01" rx="0" ry="0" x="0" y="0" width="494" height="575">
+			</rect>
+		</svg>
+		<svg class="meter-B-01">
+			<rect id="meter-B-01" rx="0" ry="0" x="0" y="0" width="494" height="115">
+			</rect>
+		</svg>
+		<svg class="meter-C-01">
+			<rect id="meter-C-01" rx="0" ry="0" x="0" y="0" width="494" height="115">
+			</rect>
+		</svg>
+		<svg class="meter-D-01">
+			<rect id="meter-D-01" rx="0" ry="0" x="0" y="0" width="494" height="115">
+			</rect>
+		</svg>
+		<svg class="meter-E-01">
+			<rect id="meter-E-01" rx="0" ry="0" x="0" y="0" width="494" height="115">
+			</rect>
+		</svg>
+		<div id="letter-01">
+			<span></span><span style="font-size:240px;">快適</span>
+		</div>
+	</div>
 </template>
 
-<style id="applicationStylesheet" type="text/css">
-  /*
-  リセットCSSがないと混雑表示ディスプレイがずれるので導入
-  html5doctor.com Reset Stylesheet
-  v1.6.1
-  Last Updated: 2010-09-17
-  Author: Richard Clark - http://richclarkdesign.com
-  Twitter: @rich_clark
-  */
+<script>
+export default {
+	name: "Kaiteki"
+}
+</script>
 
-  html, body, div, span, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  abbr, address, cite, code,
-  del, dfn, em, img, ins, kbd, q, samp,
-  small, strong, sub, sup, var,
-  b, i,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, figcaption, figure,
-  footer, header, hgroup, menu, nav, section, summary,
-  time, mark, audio, video {
-      margin:0;
-      padding:0;
-      border:0;
-      outline:0;
-      font-size:100%;
-      vertical-align:baseline;
-      background:transparent;
-  }
-
-  body {
-      line-height:1;
-  }
-
-  article,aside,details,figcaption,figure,
-  footer,header,hgroup,menu,nav,section {
-      display:block;
-  }
-
-  nav ul {
-      list-style:none;
-  }
-
-  blockquote, q {
-      quotes:none;
-  }
-
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-      content:'';
-      content:none;
-  }
-
-  a {
-      margin:0;
-      padding:0;
-      font-size:100%;
-      vertical-align:baseline;
-      background:transparent;
-  }
-
-  /* change colours to suit your needs */
-  ins {
-      background-color:#ff9;
-      color:#000;
-      text-decoration:none;
-  }
-
-  /* change colours to suit your needs */
-  mark {
-      background-color:#ff9;
-      color:#000;
-      font-style:italic;
-      font-weight:bold;
-  }
-
-  del {
-      text-decoration: line-through;
-  }
-
-  abbr[title], dfn[title] {
-      border-bottom:1px dotted;
-      cursor:help;
-  }
-
-  table {
-      border-collapse:collapse;
-      border-spacing:0;
-  }
-
-  /* change border colour to suit your needs */
-  hr {
-      display:block;
-      height:1px;
-      border:0;  
-      border-top:1px solid #cccccc;
-      margin:1em 0;
-      padding:0;
-  }
-
-  input, select {
-      vertical-align:middle;
-  }
-
-	.mediaViewInfo {
-		--web-view-name: 1280 Web – 1;
-		--web-view-id: ID1280_Web__1;
-		--web-scale-on-resize: true;
-		--web-enable-deep-linking: true;
-	}
-	:root {
-		--web-view-ids: ID1280_Web__1;
-	}
+<style>
 	* {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
 		border: none;
 	}
-	#ID1280_Web__1 {
+	#kaiteki {
 		position: absolute;
 		width: 1280px;
 		height: 800px;
 		background-color: rgba(1,0,0,1);
 		overflow: hidden;
 		--web-view-name: 1280 Web – 1;
-		--web-view-id: ID1280_Web__1;
+		--web-view-id: kaiteki;
 		--web-scale-on-resize: true;
 		--web-enable-deep-linking: true;
 	}
-	#side-color {
+	#side-color-01 {
 		fill: transparent;
 		stroke: rgba(255,255,255,1);
 		stroke-width: 1px;
@@ -188,7 +71,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.side-color {
+	.side-color-01 {
 		overflow: visible;
 		position: absolute;
 		width: 1280px;
@@ -211,7 +94,7 @@
 		font-size: 102px;
 		color: rgba(255,255,255,1);
 	}
-	#vertical-color {
+	#vertical-color-01 {
 		fill: transparent;
 		stroke: rgba(255,255,255,1);
 		stroke-width: 1px;
@@ -220,7 +103,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.vertical-color {
+	.vertical-color-01 {
 		filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
 		overflow: visible;
 		position: absolute;
@@ -230,7 +113,7 @@
 		top: 166.5px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#meter_01 {
+	#meter-D-01 {
 		fill: rgba(30,255,255,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -239,7 +122,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter_01 {
+	.meter-D-01 {
 		position: absolute;
 		overflow: visible;
 		width: 494px;
@@ -247,7 +130,7 @@
 		left: 712px;
 		top: 656px;
 	}
-	#meter_02 {
+	#meter-A-01 {
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -256,7 +139,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter_02 {
+	.meter-A-01 {
 		position: absolute;
 		overflow: visible;
 		width: 500px;
@@ -264,7 +147,7 @@
 		left: 712px;
 		top: 196px;
 	}
-	#meter_03 {
+	#meter-E-01 {
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -273,7 +156,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter_03 {
+	.meter-E-01 {
 		position: absolute;
 		overflow: visible;
 		width: 494px;
@@ -281,7 +164,7 @@
 		left: 712px;
 		top: 426px;
 	}
-	#meter_04 {
+	#meter-C-01 {
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -290,7 +173,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter_04 {
+	.meter-C-01 {
 		position: absolute;
 		overflow: visible;
 		width: 494px;
@@ -298,7 +181,7 @@
 		left: 712px;
 		top: 311px;
 	}
-	#meter_05 {
+	#meter-B-01 {
 		opacity: 0.92;
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
@@ -308,7 +191,7 @@
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter_05 {
+	.meter-B-01 {
 		filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
 		position: absolute;
 		overflow: visible;
@@ -317,7 +200,7 @@
 		left: 712px;
 		top: 196px;
 	}
-	#letter_01 {
+	#letter-01 {
 		left: 80px;
 		top: 360px;
 		position: absolute;
@@ -331,5 +214,4 @@
 		font-size: 100px;
 		color: rgba(30,255,255,1);
 	}
-
 </style>

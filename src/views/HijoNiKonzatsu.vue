@@ -1,46 +1,46 @@
 <template>
-	<div id="ooyoso-kaiteki">
+	<div id="hijo-ni-konzatsu">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-		<svg class="side-color-02" viewBox="0 0 1280 1">
-			<path id="side-color-02" d="M 0 0 L 1280 0">
+		<svg class="side-color-05" viewBox="0 0 1280 1">
+			<path id="side-color-05" d="M 0 0 L 1280 0">
 			</path>
 		</svg>
-		<div id="congestion-02">
+		<div id="congestion-05">
 			<span style="font-size:128px;">ただいまの混雑状況は</span>
 		</div>
-		<svg class="vertical-color-02" viewBox="0 0 1 650">
-			<path id="vertical-color-02" d="M 0 0 L 0 650">
+		<svg class="vertical-color-05" viewBox="0 0 1 650">
+			<path id="vertical-color-05" d="M 0 0 L 0 650">
 			</path>
 		</svg>
-		<svg class="meter-A-02">
-			<rect id="meter-A-02" rx="0" ry="0" x="0" y="0" width="494" height="575">
+		<svg class="meter-A-05">
+			<rect id="meter-A-05" rx="0" ry="0" x="0" y="0" width="494" height="575">
 			</rect>
 		</svg>
-		<svg class="meter-B-02">
-			<rect id="meter-B-02" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		<svg class="meter-B-05">
+			<rect id="meter-B-05" rx="0" ry="0" x="0" y="0" width="494" height="115">
 			</rect>
 		</svg>
-		<svg class="meter-C-02">
-			<rect id="meter-C-02" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		<svg class="meter-C-05">
+			<rect id="meter-C-05" rx="0" ry="0" x="0" y="0" width="494" height="115">
 			</rect>
 		</svg>
-		<svg class="meter-D-02">
-			<rect id="meter-D-02" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		<svg class="meter-D-05">
+			<rect id="meter-D-05" rx="0" ry="0" x="0" y="0" width="494" height="115">
 			</rect>
 		</svg>
-		<svg class="meter-E-02">
-			<rect id="meter-E-02" rx="0" ry="0" x="0" y="0" width="494" height="115">
+		<svg class="meter-E-05">
+			<rect id="meter-E-05" rx="0" ry="0" x="0" y="0" width="494" height="115">
 			</rect>
 		</svg>
-		<div id="letter-02">
-			<span></span><span style="font-size:96px;">おおよそ</span><br><span style="font-size:216px;">快適</span>
+		<div id="letter-05">
+			<span></span><span style="font-size:128px;">非常に</span><br><span style="font-size:216px;">混雑</span>
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
-	name: "OoyosoKaiteki"
+	name: "HijoNiKonzastu"
 }
 </script>
 
@@ -51,18 +51,18 @@ export default {
 		box-sizing: border-box;
 		border: none;
 	}
-	#ooyoso-kaiteki {
+	#hijo-ni-konzatsu {
 		position: absolute;
 		width: 1280px;
 		height: 800px;
 		background-color: rgba(1,0,0,1);
 		overflow: hidden;
 		--web-view-name: 1280 Web – 1;
-		--web-view-id: ooyoso-kaiteki;
+		--web-view-id: hijo-ni-konzatsu;
 		--web-scale-on-resize: true;
 		--web-enable-deep-linking: true;
 	}
-	#side-color-02 {
+	#side-color-05 {
 		fill: transparent;
 		stroke: rgba(255,255,255,1);
 		stroke-width: 1px;
@@ -71,7 +71,7 @@ export default {
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.side-color-02 {
+	.side-color-05 {
 		overflow: visible;
 		position: absolute;
 		width: 1280px;
@@ -80,7 +80,7 @@ export default {
 		top: 166.5px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#congestion-02 {
+	#congestion-05 {
 		left: 20px;
 		top: 32px;
 		position: absolute;
@@ -94,7 +94,7 @@ export default {
 		font-size: 102px;
 		color: rgba(255,255,255,1);
 	}
-	#vertical-color-02 {
+	#vertical-color-05 {
 		fill: transparent;
 		stroke: rgba(255,255,255,1);
 		stroke-width: 1px;
@@ -103,7 +103,7 @@ export default {
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.vertical-color-02 {
+	.vertical-color-05 {
 		filter: drop-shadow(0px 3px 6px rgba(255, 255, 255, 0.161));
 		overflow: visible;
 		position: absolute;
@@ -113,7 +113,7 @@ export default {
 		top: 166.5px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#meter-D-02 {
+	#meter-D-05 {
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -122,7 +122,7 @@ export default {
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter-D-02 {
+	.meter-D-05 {
 		position: absolute;
 		overflow: visible;
 		width: 494px;
@@ -130,8 +130,8 @@ export default {
 		left: 712px;
 		top: 656px;
 	}
-	#meter-A-02 {
-		fill: rgba(0,255,51,1);
+	#meter-A-05 {
+		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
 		stroke-linejoin: miter;
@@ -139,7 +139,7 @@ export default {
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter-A-02 {
+	.meter-A-05 {
 		position: absolute;
 		overflow: visible;
 		width: 500px;
@@ -147,7 +147,7 @@ export default {
 		left: 712px;
 		top: 196px;
 	}
-	#meter-E-02 {
+	#meter-E-05 {
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -156,7 +156,7 @@ export default {
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter-E-02 {
+	.meter-E-05 {
 		position: absolute;
 		overflow: visible;
 		width: 494px;
@@ -164,7 +164,7 @@ export default {
 		left: 712px;
 		top: 426px;
 	}
-	#meter-C-02 {
+	#meter-C-05 {
 		fill: rgba(128,128,128,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
@@ -173,7 +173,7 @@ export default {
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter-C-02 {
+	.meter-C-05 {
 		position: absolute;
 		overflow: visible;
 		width: 494px;
@@ -181,8 +181,9 @@ export default {
 		left: 712px;
 		top: 311px;
 	}
-	#meter-B-02 {
-		fill: rgba(128,128,128,1);
+	#meter-B-05 {
+		opacity: 0.92;
+		fill: rgba(255,61,61,1);
 		stroke: rgba(0,0,0,1);
 		stroke-width: 1px;
 		stroke-linejoin: miter;
@@ -190,7 +191,7 @@ export default {
 		stroke-miterlimit: 4;
 		shape-rendering: auto;
 	}
-	.meter-B-02 {
+	.meter-B-05 {
 		position: absolute;
 		overflow: visible;
 		width: 512px;
@@ -198,7 +199,7 @@ export default {
 		left: 712px;
 		top: 196px;
 	}
-	#letter-02 {
+	#letter-05 {
 		left: 101px;
 		top: 289px;
 		position: absolute;
@@ -210,6 +211,6 @@ export default {
 		font-style: normal;
 		font-weight: normal;
 		font-size: 100px;
-		color: rgba(0,255,51,1);
+		color: rgba(255,61,61,1);
 	}
 </style>
