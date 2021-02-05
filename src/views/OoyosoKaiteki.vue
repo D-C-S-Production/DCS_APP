@@ -6,7 +6,7 @@
 			</path>
 		</svg>
 		<div id="congestion-02">
-			<span style="font-size:128px;">ただいまの混雑状況は</span>
+			<span style="font-size:124px;">ただいまの混雑状況は</span>
 		</div>
 		<svg class="vertical-color-02" viewBox="0 0 1 650">
 			<path id="vertical-color-02" d="M 0 0 L 0 650">

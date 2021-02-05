@@ -33,7 +33,7 @@ export default {
       let resolvedRoute = this.$router.resolve({
         name: name,
       })
-      window.open(resolvedRoute.href, '', '_blank,width=1285,height=830')
+      window.open(resolvedRoute.href, '', '_blank,width=1280,height=828')
     },
 
     // ページ更新メソッドreloadWindow()

@@ -13,7 +13,7 @@ yarn install
 * **APIとサービス** → **認証情報**
 * ”キー”の右にある四角のボタンをクリックしてコピー
 
-## ④ GCPのキーを入れる()
+## ④ GCPのキーをenvファイルに入れる
 ホームディレクトリ配下に `.env.local` を作り、以下の文を記入
 ```
 VUE_APP_API_KEY = 'GCPからコピーしたAPIのキーを入れる'
@@ -25,10 +25,7 @@ yarn electron:serve
 ```
 
 
-### Electronのビルド (おまけ。全部完成したらやる) 
+## ⑥ Electronのビルド
 ```
-yarn build
+yarn electron:build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
