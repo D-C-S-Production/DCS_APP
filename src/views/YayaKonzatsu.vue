@@ -82,7 +82,7 @@ export default {
 	}
 	#congestion-03 {
 		left: 20px;
-		top: 32px;
+		top: 0px;
 		position: absolute;
 		overflow: visible;
 		width: 1054px;
@@ -201,7 +201,7 @@ export default {
 	}
 	#letter-03 {
 		left: 101px;
-		top: 289px;
+		top: 250px;
 		position: absolute;
 		overflow: visible;
 		width: 444px;

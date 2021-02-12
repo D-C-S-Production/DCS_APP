@@ -33,14 +33,14 @@
 			</rect>
 		</svg>
 		<div id="letter-02">
-			<span></span><span style="font-size:96px;">おおよそ</span><br><span style="font-size:216px;">快適</span>
+			<span></span><span style="font-size:128px;">やや</span><br><span style="font-size:216px;">快適</span>
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
-	name: "OoyosoKaiteki"
+	name: "YayaKaiteki"
 }
 </script>
 
@@ -82,7 +82,7 @@ export default {
 	}
 	#congestion-02 {
 		left: 20px;
-		top: 32px;
+		top: 0px;
 		position: absolute;
 		overflow: visible;
 		width: 1054px;
@@ -200,7 +200,7 @@ export default {
 	}
 	#letter-02 {
 		left: 101px;
-		top: 289px;
+		top: 250px;
 		position: absolute;
 		overflow: visible;
 		width: 444px;

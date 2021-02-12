@@ -6,7 +6,7 @@
 			</path>
 		</svg>
 		<div id="congestion-05">
-			<span style="font-size:128px;">ただいまの混雑状況は</span>
+			<span style="font-size:124px;">ただいまの混雑状況は</span>
 		</div>
 		<svg class="vertical-color-05" viewBox="0 0 1 650">
 			<path id="vertical-color-05" d="M 0 0 L 0 650">
@@ -82,7 +82,7 @@ export default {
 	}
 	#congestion-05 {
 		left: 20px;
-		top: 32px;
+		top: 0px;
 		position: absolute;
 		overflow: visible;
 		width: 1054px;
@@ -201,7 +201,7 @@ export default {
 	}
 	#letter-05 {
 		left: 101px;
-		top: 289px;
+		top: 250px;
 		position: absolute;
 		overflow: visible;
 		width: 444px;

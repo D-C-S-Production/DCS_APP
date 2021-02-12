@@ -1,6 +1,6 @@
 <template>
 	<div id="kaiteki">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" >
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" > -->
 		<svg class="side-color-01" viewBox="0 0 1280 1">
 			<path id="side-color-01" d="M 0 0 L 1280 0">
 			</path>
@@ -82,7 +82,7 @@ export default {
 	}
 	#congestion-01 {
 		left: 20px;
-		top: 32px;
+		top: 0px;
 		position: absolute;
 		overflow: visible;
 		width: 1054px;
@@ -202,7 +202,7 @@ export default {
 	}
 	#letter-01 {
 		left: 80px;
-		top: 360px;
+		top: 310px;
 		position: absolute;
 		overflow: visible;
 		width: 444px;

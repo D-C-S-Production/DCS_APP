@@ -16,9 +16,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Kaiteki.vue')
   },
   {
-    path: '/ooyosokaiteki',
-    name: 'OoyosoKaiteki',
-    component: () => import(/* webpackChunkName: "about" */ '../views/OoyosoKaiteki.vue')
+    path: '/yayakaiteki',
+    name: 'YayaKaiteki',
+    component: () => import(/* webpackChunkName: "about" */ '../views/YayaKaiteki.vue')
   },
   {
     path: '/yayakonzatsu',

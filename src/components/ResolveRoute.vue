@@ -16,7 +16,7 @@ export default {
       if(this.persentage <= 20) {
         return 'Kaiteki'
       } else if(this.persentage <= 40) {
-        return 'OoyosoKaiteki'
+        return 'YayaKaiteki'
       } else if(this.persentage <= 60) {
         return 'YayaKonzatsu'
       } else if(this.persentage <= 80) {
@@ -33,7 +33,7 @@ export default {
       let resolvedRoute = this.$router.resolve({
         name: name,
       })
-      window.open(resolvedRoute.href, '', '_blank,width=1280,height=828')
+      window.open(resolvedRoute.href, '', '_blank,width=1280,height=800')
     },
 
     // ページ更新メソッドreloadWindow()
