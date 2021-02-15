@@ -1,7 +1,9 @@
 <template>
   <div id="ImageUploader">
     <label v-if="!value">
-      <input ref="file" type="file" accept="image/jpeg, image/png" @change="upload">
+      <b-form-file 
+        placeholder="ファイルを選択してください。"
+        accept="image/*" @change="upload"/>
     </label>
     <label v-if="value">
       <img :src="value" />

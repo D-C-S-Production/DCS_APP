@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p><button @click="reloadWindow()">やり直す</button></p>
-    <p><button @click="openWindow(output)">サイネージ用ウィンドウを開く</button></p>
+    <p><b-button variant="danger" @click="reloadWindow()">やり直す</b-button></p>
+    <p><b-button variant="success" @click="openWindow(output)">別ウィンドウを開く</b-button></p>
   </div>
 </template>
 

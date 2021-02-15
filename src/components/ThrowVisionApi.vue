@@ -1,6 +1,6 @@
 <template>
   <div id="ThrowVisionApi">
-    <button @click="callApi" :disabled="called">混雑率を計測する</button>
+    <p><b-button variant="primary" @click="callApi" :disabled="called">混雑率を計測する</b-button></p>
     <p v-if="called==true && countPerson == 0">人物を検出できませんでした。</p>
   </div>
 </template>

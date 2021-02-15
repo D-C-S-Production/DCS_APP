@@ -1,7 +1,7 @@
 <template>
   <div id="CalcCongestion">
     <!-- 仮表示 -->
-    <input v-model="referenceValue" placeholder="基準値を入力">
+    <p><b-form-input type="number" v-model="referenceValue" placeholder="基準値を入力"/></p>
     <p>人数カウント {{ count }}人</p>
     <p>{{ result }}</p>
   </div>
@@ -25,7 +25,7 @@ export default {
         this.$emit('persentage', this.persentage)
         return `現在の混雑率は${this.persentage}%です`
       } else {
-        return '基準値を入力してください（半角数字以外入力不可）'
+        return '基準値は0以上の値を入力してください。'
       }
     }
   }

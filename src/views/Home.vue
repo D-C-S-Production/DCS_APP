@@ -1,23 +1,37 @@
 <template>
   <div id="home">
-    <h1>混雑率図るくん</h1>
-    <!-- 
-      v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義
-      valueというpropsと、inputイベントを自動作成する
-      $eventは、カスタムイベントの引数。これならinput
-    -->
-    <ImageUploader v-model="toBase64Image"/>
+    <header>
+      <b-container>
+        <b-row>
+          <b-navbar-brand>
+            <p>混雑率測るくん</p>
+          </b-navbar-brand>
+        </b-row>
+      </b-container>
+    </header>
+    <main>
+      <b-container>
+        <b-row>
+          <!-- 
+            v-modelは :value="toBase64Image" @input="toBase64Image = $event.target.value" と同義
+            valueというpropsと、inputイベントを自動作成する
+            $eventは、カスタムイベントの引数。これならinput
+          -->
+          <p><ImageUploader v-model="toBase64Image"/></p>
 
-    <CalcCongestion :count="count" @persentage="setPersentage"/>
+          <p><CalcCongestion :count="count" @persentage="setPersentage"/></p>
 
-    <!--
-      :pictureにはreplaceImageUrlメソッドからの戻り値が入る(props down)
-      カスタムイベント@countから、setCountメソッドを呼び出す(event up)
-      props downとevent upでメソッドを呼び出すときの書き方が違うので気をつけること!
-    -->
-    <ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/>
+          <!--
+            :pictureにはreplaceImageUrlメソッドからの戻り値が入る(props down)
+            カスタムイベント@countから、setCountメソッドを呼び出す(event up)
+            props downとevent upでメソッドを呼び出すときの書き方が違うので気をつけること!
+          -->
+          <p><ThrowVisionApi :picture="replaceImageUrl()" @count="setCount"/></p>
 
-    <ResolveRoute :persentage="persentage"/>
+          <p><ResolveRoute :persentage="persentage"/></p>
+        </b-row>
+      </b-container>
+    </main>
   </div>
 </template>
 
